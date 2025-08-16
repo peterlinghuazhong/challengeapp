@@ -140,7 +140,7 @@ export default function MovieWatchlist() {
                     color={movie.watched ? "inherit" : "success"}
                     onClick={() => toggleWatched(movie.id)}
                   >
-                    Mark to watched
+                    Mark to watch
                   </Button>
                 </CardContent>
               </Card>
