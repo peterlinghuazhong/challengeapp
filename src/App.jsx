@@ -85,7 +85,7 @@ export default function MovieWatchlist() {
                         }),
                       }}
                     >
-                      {alreadyAdded ? "Added to Watchlist" : "Add to Watchlist"}
+                      alreadyAdded
                     </Button>
                   </Stack>
                 </CardContent>
@@ -140,7 +140,7 @@ export default function MovieWatchlist() {
                     color={movie.watched ? "inherit" : "success"}
                     onClick={() => toggleWatched(movie.id)}
                   >
-                    {movie.watched ? "Mark as Unwatched" : "Mark as Watched"}
+                    movie watch
                   </Button>
                 </CardContent>
               </Card>
