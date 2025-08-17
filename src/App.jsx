@@ -25,15 +25,16 @@ export default function MovieWatchlist() {
 
   const isInWatchlist = (id) => watchlist.some((movie) => movie.id === id);
 
+  //  add  watchlist
   const addToWatchlist = (movie) => {
-    if (!isInWatchlist(movie.id)) {
-      setWatchlist((prev) => [...prev, { ...movie, watched: false }]);
+    if (!watchlist.find((m) => m.id === movie.id)) {
+      setWatchlist([...watchlist, { ...movie, watched: false }]);
     }
   };
 
   const toggleWatched = (id) => {
-    setWatchlist((prev) =>
-      prev.map((movie) =>
+    setWatchlist(
+      watchlist.map((movie) =>
         movie.id === id ? { ...movie, watched: !movie.watched } : movie
       )
     );
